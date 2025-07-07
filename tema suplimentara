@@ -1,0 +1,24 @@
+port numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-np.pi/2 + 0.01, np.pi/2 - 0.01, 1000)
+
+sinus = np.sin(x)
+cosinus =np.cos(x)
+tangenta = np.tan(x)
+contangenta =1/np.tan(x)
+
+plt.plot(x,sinus, label="six x")
+plt.plot(x,cosinus, label="cos x")
+plt.plot(x, tangenta, label="tan x")
+plt.plot(x, contangenta, label="contangenta x")
+
+plt.axhline(0, color="black", linewidth = 0.75)
+plt.axhline(0, color="black", linewidth = 0.75)
+plt.grid(True)
+plt.ylim(-10,10)
+plt.legend()
+plt.title("Functii sin,cos.tg.ctg")
+plt.xlabel(x)
+plt.ylabel("Val Functii")
+plt.show()
